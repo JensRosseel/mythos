@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use App\Models\Post;
 
 class MainController extends BaseController
 {
@@ -13,6 +14,7 @@ class MainController extends BaseController
 
     function index()
     {
-        return view('home');
+        $posts = Post::all();
+        return view('home', ['posts' => $posts]);
     }
 }
