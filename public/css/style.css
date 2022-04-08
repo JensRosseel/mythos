@@ -3,6 +3,8 @@ body {
     font-size: 16px;
 }
 
+/* home page */
+
 .navbar {
     width: 100%;
     background-color: slategrey;
@@ -26,7 +28,8 @@ body {
 
 .posts {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .post {
@@ -58,10 +61,18 @@ body {
 
 
 .profile {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    left: 90%;
-    width: 100px;
+    left: 95%;
     top: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.profile img {
+    width: 50px;
+    margin: auto;
 }
 
 .postmaker {
@@ -72,6 +83,7 @@ body {
     border: 1px solid black;
     margin-left: 20%;
     bottom: 0;
+    background-color: white;
     z-index: 2;
 }
 
@@ -88,9 +100,49 @@ body {
 }
 
 .postmaker-button {
+    display: block;
     position: fixed;
     width: 60%;
     margin-left: 20%;
     bottom: 0;
     z-index: 1;
+}
+
+/* account pages */
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.account .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.account form {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 5%;
+}
+
+.account form input, .account form label {
+    margin: 2.5px;
+}
+
+.account form input[type=submit] {
+    margin-top: 20px;
+}
+
+.account form input[type=submit]:hover {
+    cursor: pointer;
 }

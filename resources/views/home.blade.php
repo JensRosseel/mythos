@@ -9,10 +9,8 @@
     </div>
     <div class="profile">
         @if(Auth::check())
-            <a href="">
-                <img class="profile" src={{ asset('images/account.png') }} alt=""/></br>
-                Welcome, {{ Auth::user()->username }}
-            </a><br>
+            <img src={{ asset('images/account.png') }} alt=""/></br>
+            <span>Welcome, {{ Auth::user()->username }}</span><br>
             <a href={{ route('logout') }}>Logout</a>
         @else
                 <a href={{ route('login') }}><img class="profile" src={{ asset('images/account.png') }} alt=""/></a>
