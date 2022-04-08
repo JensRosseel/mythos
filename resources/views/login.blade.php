@@ -18,10 +18,12 @@
 
                 <form method="post" action={{ route('checklogin') }}>
                     @csrf
-                    <label for="email">Enter Email</label>
-                    <input type="email" name="email" />
-                    <label for="password">Enter Password</label>
-                    <input type="password" name="password" />
+                    <div class="form-items">
+                        <label for="email">Enter Email</label>
+                        <input type="email" name="email" />
+                        <label for="password">Enter Password</label>
+                        <input type="password" name="password" />
+                    </div>
                     <input type="submit" name="login" value="Login" />
                 </form>
                 <a href={{ route('register') }}>Don't have an account? Sign up here!</a>

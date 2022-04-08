@@ -1,6 +1,7 @@
 body {
-    margin: 0;
+    margin: 0px;
     font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* home page */
@@ -21,7 +22,6 @@ body {
 }
 
 .navbar .links a {
-    padding: 10px;
     text-decoration: none;
     color: white;
 }
@@ -108,6 +108,10 @@ body {
     z-index: 1;
 }
 
+.postmaker form input[type=submit]:hover, .postmaker-button:hover, .postmaker form button:hover {
+    cursor: pointer;
+}
+
 /* account pages */
 
 .account {
@@ -130,9 +134,12 @@ body {
 
 .account form {
     width: 400px;
+    margin-bottom: 5%;
+}
+
+.account form .form-items {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-bottom: 5%;
 }
 
 .account form input, .account form label {
@@ -141,6 +148,7 @@ body {
 
 .account form input[type=submit] {
     margin-top: 20px;
+    width: 100%;
 }
 
 .account form input[type=submit]:hover {
