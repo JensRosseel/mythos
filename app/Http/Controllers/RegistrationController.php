@@ -10,7 +10,7 @@ class RegistrationController extends MainController
     function register()
     {
         $this->validate(request(), [
-            'username' => 'required',
+            'username' => 'required|max:20',
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email',
