@@ -34,30 +34,22 @@
         @endforeach
     </div>
     @if(Auth::check())
-    <button class="postmaker-button">Create Post</button>
-    <div class="postmaker">
+    <button id="postmaker-button" class="postmaker-button">Create Post</button>
+    <div id="postmaker" class="postmaker">
         <form method="post" action={{ route('createpost') }}>
             @csrf
             <label for="title">Title:</label>
             <input type="text" name="title" id="title" required><br>
-            <label for="norse">Norse</label>
-            <input type="radio" name="origin" id="norse" value="norse" required>
-            <label for="egyptian">Egyptian</label>
-            <input type="radio" name="origin" id="egyptian" value="egyptian" required>
-            <label for="greek">Greek</label>
-            <input type="radio" name="origin" id="greek" value="greek" required>
-            <label for="roman">Roman</label>
-            <input type="radio" name="origin" id="roman" value="roman" required>
-            <label for="hindu">Hindu</label>
-            <input type="radio" name="origin" id="hindu" value="hindu" required>
-            <label for="other">Other</label>
-            <input type="radio" name="origin" id="other" value="other" required><br>
-            <label for="description">Description</label><br>
+            <label for="origin">Origin:</label>
+            <input type="text" name="origin" id="origin" required><br>
+            <label for="description">Description:</label><br>
             <textarea name="description" id="description" required></textarea><br>
-            <label for="author">Author</label>
+            <label for="author">Author:</label>
             <input type="text" name="author" id="author" value={{ Auth::user()->username }} readonly>
             <input type="submit" value="Create">
+            <button id="close">Close</button>
         </form>
     </div>
     @endif
+    <script src={{ asset('js/script.js') }}></script>
 @endsection

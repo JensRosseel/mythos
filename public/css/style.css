@@ -59,12 +59,13 @@ body {
 
 .profile {
     position: absolute;
-    left: 94%;
-    width: 50px;
+    left: 90%;
+    width: 100px;
     top: 0;
 }
 
 .postmaker {
+    display: none;
     position: fixed;
     width: 60%;
     height: 50vh;
