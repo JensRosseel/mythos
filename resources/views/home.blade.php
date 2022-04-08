@@ -7,16 +7,14 @@
             <a href={{ route('home') }}>Home</a>
         </div>
     </div>
-    <div class="profile">
-        @if(Auth::check())
-            <img src={{ asset('images/account.png') }} alt=""/></br>
-            <span>Welcome, {{ Auth::user()->username }}</span><br>
-            <a href={{ route('logout') }}>Logout</a>
-        @else
-                <a href={{ route('login') }}><img class="profile" src={{ asset('images/account.png') }} alt=""/></a>
-        @endif
-
-    </div>
+    @if(Auth::check())
+        <div class="profile">
+            <span>Welcome, {{ Auth::user()->username }}<br><a href={{ route('logout') }}>Logout</a></span>
+            <img src={{ asset('images/account.png') }} alt=""/>
+        </div>
+    @else
+        <a href={{ route('login') }} class="profile-collapsed"><img src={{ asset('images/account.png') }} alt=""/></a>
+    @endif
     <div class="container">
         <div class="posts">
             @foreach ($posts as $key => $post)
