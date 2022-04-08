@@ -11,11 +11,12 @@ class PostController extends MainController
     {
         $this->validate(request(), [
             'title' => 'required',
-            'tags' => 'required',
+            'origin' => 'required',
             'description' => 'required',
+            'author' => 'required'
         ]);
 
-        $post = Post::create(request(['title', 'tags', 'description', 'author']));
+        $post = Post::create(request(['title', 'origin', 'description', 'author']));
 
         return redirect()->home();
     }
