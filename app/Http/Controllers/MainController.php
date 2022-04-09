@@ -27,14 +27,7 @@ class MainController extends BaseController
 
     function login()
     {
-        if(Auth::check())
-        {
-            redirect()->account();
-        }
-        else
-        {
-            return view('login');
-        }
+        return view('login');
     }
 
     function search(Request $request)
@@ -42,5 +35,18 @@ class MainController extends BaseController
         $search = $request->input('search');
         $posts = Post::where('title', 'like', '%'.$search.'%')->get();
         return view('home', ['posts' => $posts]);
+    }
+
+    function account()
+    {
+        if(Auth::check())
+        {
+            $posts = Post::where('author', Auth::user()->username)->get();
+            return view('account', ['posts' => $posts]);
+        }
+        else
+        {
+            return redirect()->back();
+        }
     }
 }

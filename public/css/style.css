@@ -156,16 +156,16 @@ body {
     cursor: pointer;
 }
 
-/* account pages */
+/* registor pages */
 
-.account {
+.registor {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
 
-.account .container {
+.registor .container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,31 +178,57 @@ body {
     background-size: cover;
 }
 
-.account form {
+.registor form {
     width: 400px;
     margin-bottom: 5%;
 }
 
-.account form .form-items {
+.registor form .form-items {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-.account form input, .account form label {
+.registor form input, .registor form label {
     margin: 2.5px;
 }
 
-.account form input[type=submit] {
+.registor form input[type=submit] {
     margin-top: 20px;
     width: 100%;
     border: 1px solid black;
     background-color: none;
 }
 
-.account form input[type=submit]:hover {
+.registor form input[type=submit]:hover {
     cursor: pointer;
 }
 
-.account a {
+.registor a {
     color: black;
+}
+
+/* account page */
+
+.account {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.account-details {
+    position: static;
+    padding: 5%;
+}
+
+.account-details a {
+    text-decoration: none;
+    color: #4f3324;
+    border: 1px solid #4f3324;
+    background-color: #efe1cb;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.account-details a:hover {
+    color: #efe1cb;
+    background-color: #4f3324;
 }

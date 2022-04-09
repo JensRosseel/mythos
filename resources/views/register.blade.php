@@ -1,6 +1,6 @@
 @extends('layouts.header')
 @section('content')
-    <div class="account">
+    <div class="registor">
         <div class="container">
             <h1>Register</h1>
 

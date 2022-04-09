@@ -14,3 +14,4 @@ Route::get('/login', [MainController::class, 'login'])->name('login');
 Route::post('/checklogin', [SessionController::class, 'checklogin'])->name('checklogin');
 Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
 Route::post('/createpost', [PostController::class, 'createpost'])->name('createpost');
+Route::get('/account', [MainController::class, 'account'])->name('account');

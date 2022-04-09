@@ -14,7 +14,7 @@
     @if(Auth::check())
         <div class="profile">
             <span>Welcome, {{ Auth::user()->username }}<br><a href={{ route('logout') }}>Logout</a></span>
-            <img src={{ asset('images/account.png') }} alt=""/>
+            <a href={{ route('account') }}><img src={{ asset('images/account.png') }} alt=""/></a>
         </div>
     @else
         <a href={{ route('login') }} class="profile-collapsed"><img src={{ asset('images/account.png') }} alt=""/></a>
