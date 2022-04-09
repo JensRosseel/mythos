@@ -5,6 +5,10 @@
         <h1>Mythos</h1>
         <div class="links">
             <a href={{ route('home') }}>Home</a>
+            <form method="get" action={{ route('search') }}>
+                <input type="text" name="search" id="search" placeholder="Search...">
+                <input type="submit" name="searchbtn" id="searchbtn" value='search'>
+            </form>
         </div>
     </div>
     @if(Auth::check())

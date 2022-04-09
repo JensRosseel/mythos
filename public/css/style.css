@@ -7,7 +7,7 @@ body {
     margin: 0px;
     font-size: 16px;
     font-family: artgreco;
-    background-color: #cfb3a8;
+    background-color: #efe1cb;
 }
 
 /* home page */
@@ -22,14 +22,28 @@ body {
 }
 
 .navbar .links{
-    background-color: grey;
+    background-color: #4f3324;
     text-align: center;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar .links a {
     text-decoration: none;
     color: white;
+    margin-right: 10px;
+}
+
+.navbar .links input {
+    background-color: #efe1cb;
+    border: none;
+    height: 100%;
+}
+
+.navbar .links input[type=submit]:hover {
+    cursor: pointer;
 }
 
 .posts {
